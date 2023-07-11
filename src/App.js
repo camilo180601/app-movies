@@ -7,6 +7,11 @@ import { useState } from "react";
 function App() {
 
   const [listadoState, setListadoState] = useState([]);
+  const year = new Date().getFullYear();
+
+  const footerStyles = {
+    textAlign: 'center'
+  };
 
   return (
     <div className="layout">
@@ -34,8 +39,8 @@ function App() {
             <Crear setListadoState={setListadoState}/>
             
         </aside>
-        <footer className="footer">
-            &copy; Máster en React - <a href="https://victorroblesweb.es">victorroblesweb.es</a>
+        <footer className="footer" style={footerStyles}>
+            Camilo Lopez &copy; {year}
         </footer>
 
     </div>
